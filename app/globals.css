@@ -2,15 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --background: 250 100% 98%;
+    --foreground: 250 10% 10%;
+    --card: 250 100% 98%;
+    --card-foreground: 250 10% 10%;
+    --popover: 250 100% 98%;
+    --popover-foreground: 250 10% 10%;
+    --primary: 250 95% 60%;
+    --primary-foreground: 250 10% 98%;
+    --secondary: 250 30% 96%;
+    --secondary-foreground: 250 10% 10%;
+    --muted: 250 30% 96%;
+    --muted-foreground: 250 10% 45%;
+    --accent: 250 30% 96%;
+    --accent-foreground: 250 10% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 250 10% 98%;
+    --border: 250 20% 92%;
+    --input: 250 20% 92%;
+    --ring: 250 95% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 250 10% 10%;
+    --foreground: 250 10% 98%;
+    --card: 250 10% 10%;
+    --card-foreground: 250 10% 98%;
+    --popover: 250 10% 10%;
+    --popover-foreground: 250 10% 98%;
+    --primary: 250 95% 60%;
+    --primary-foreground: 250 10% 98%;
+    --secondary: 250 30% 20%;
+    --secondary-foreground: 250 10% 98%;
+    --muted: 250 30% 20%;
+    --muted-foreground: 250 10% 65%;
+    --accent: 250 30% 20%;
+    --accent-foreground: 250 10% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 250 10% 98%;
+    --border: 250 20% 20%;
+    --input: 250 20% 20%;
+    --ring: 250 95% 60%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: 
+      radial-gradient(circle at center, #1a1a3f 0%, #0a0a1f 100%),
+      url('/stars.svg');
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
   }
 }
 
@@ -18,6 +75,32 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 relative overflow-hidden;
+  }
+
+  .card {
+    @apply bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-colors;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary-dark transition-colors font-medium shadow-glow hover:shadow-none;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 rounded-lg border border-border hover:bg-secondary transition-colors font-medium;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
 }
 
 @layer utilities {
