@@ -2,19 +2,34 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Locale } from "@/middleware";
 
-const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "Sobre", href: "#about" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Serviços", href: "#services" },
-  { name: "Contato", href: "#contact" },
-];
+interface NavigationProps {
+  locale: Locale;
+  dict: {
+    home: string;
+    about: string;
+    projects: string;
+    services: string;
+    contact: string;
+    blog: string;
+  };
+  switchLanguage: string;
+}
 
-export function Navigation() {
+export function Navigation({ locale, dict, switchLanguage }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: dict.home, href: "#home" },
+    { name: dict.about, href: "#about" },
+    { name: dict.projects, href: "#projects" },
+    { name: dict.services, href: "#services" },
+    { name: dict.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +53,7 @@ export function Navigation() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navigation]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -61,7 +76,7 @@ export function Navigation() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
+          <Link href={`/${locale}`} className="text-xl font-bold">
             <span className="gradient-text">PortifoLe</span>
           </Link>
 
@@ -81,11 +96,13 @@ export function Navigation() {
               </Link>
             ))}
             <Link
-              href="/blog"
+              href={`/${locale}/blog`}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
-              Blog
+              {dict.blog}
             </Link>
+            
+            <LanguageSwitcher locale={locale} label={switchLanguage} />
           </div>
 
           {/* Mobile menu button */}
@@ -145,11 +162,14 @@ export function Navigation() {
                   </Link>
                 ))}
                 <Link
-                  href="/blog"
+                  href={`/${locale}/blog`}
                   className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-primary hover:bg-secondary-light transition-colors"
                 >
-                  Blog
+                  {dict.blog}
                 </Link>
+                <div className="px-4 py-3">
+                  <LanguageSwitcher locale={locale} label={switchLanguage} />
+                </div>
               </div>
             </motion.div>
           )}

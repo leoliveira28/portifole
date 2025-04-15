@@ -1,0 +1,105 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "services": "Serviços",
+    "contact": "Contato",
+    "blog": "Blog"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Leandro Oliveira",
+    "title": "Desenvolvedor Full Stack",
+    "description": "Especializado em criar aplicações web modernas e responsivas usando Next.js e React.",
+    "cta": "Meus Projetos",
+    "contact": "Entre em Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor Full Stack com mais de 3 anos de experiência em desenvolvimento web, especializado em criar soluções intuitivas e eficientes com React.js e Next.js.",
+    "paragraph1": "Minha jornada na programação começou com uma paixão por criar experiências digitais memoráveis. Ao longo dos anos, desenvolvi expertise em diversas tecnologias modernas, sempre focando em entregar soluções que não apenas atendam às necessidades dos clientes, mas também superem suas expectativas.",
+    "paragraph2": "Acredito que o desenvolvimento web vai além de apenas escrever código - é sobre criar experiências que impactam positivamente o negócio dos clientes. Meu objetivo é ajudar empresas a alcançarem seus objetivos através de soluções tecnológicas inovadoras e eficientes.",
+    "technologies": "Tecnologias Principais"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "Conjunto de tecnologias e ferramentas que utilizo para criar soluções web modernas e eficientes.",
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "others": "Outros"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "description": "Uma seleção dos meus principais projetos, demonstrando expertise em desenvolvimento web moderno.",
+    "demoLink": "Demo ao Vivo",
+    "githubLink": "GitHub",
+    "project1": {
+      "title": "Hospital de Base de Rio Preto",
+      "description": "Desenvolvi um portal web completo para o Hospital de Base de Rio Preto, uma das maiores instituições de saúde do Brasil, que recebe mais de 100.000 visitas mensais. O portal fornece informações detalhadas tanto para pacientes quanto para profissionais de saúde e inclui um blog institucional integrado. Construído com Next.js e otimizado para 100% de SEO, maximizando alcance e visibilidade."
+    },
+    "project2": {
+      "title": "Hospital da Criança e Maternidade (HCM)",
+      "description": "Desenvolvi uma presença web para o HCM (Hospital da Criança e Maternidade), um hospital pediátrico dedicado a proporcionar um atendimento humanizado. O website foi projetado com foco na sensibilidade e facilidade de uso para abordar a natureza delicada de uma instituição de saúde infantil."
+    },
+    "project3": {
+      "title": "Sistema de Gestão de Tarefas SmartSol",
+      "description": "Desenvolvi um sistema completo de gerenciamento de tarefas com interface estilo Kanban. Este projeto foi construído inteiramente usando Next.js para o frontend e backend, utilizando PostgreSQL para o banco de dados e implantado na Vercel para escalabilidade e confiabilidade."
+    }
+  },
+  "services": {
+    "title": "Serviços",
+    "description": "Ofereço soluções personalizadas para transformar suas ideias em realidade.",
+    "service1": {
+      "title": "Desenvolvimento Front-end",
+      "description": "Criação de interfaces modernas, responsivas e de alta performance com React, Next.js e outras tecnologias de ponta."
+    },
+    "service2": {
+      "title": "Desenvolvimento Back-end",
+      "description": "Construção de APIs robustas, escaláveis e seguras utilizando Node.js, Express e bancos de dados SQL/NoSQL."
+    },
+    "service3": {
+      "title": "Aplicações Full Stack",
+      "description": "Desenvolvimento completo de aplicações web, desde o front-end até o back-end, com integração de APIs e serviços externos."
+    },
+    "service4": {
+      "title": "Consultoria Técnica",
+      "description": "Consultoria especializada em arquitetura de software, performance e melhores práticas de desenvolvimento."
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Vamos discutir como posso ajudar a transformar sua ideia em realidade.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "sending": "Enviando...",
+      "send": "Enviar via WhatsApp"
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "description": "Estou disponível para discutir novos projetos e oportunidades. Entre em contato através do formulário ou das redes sociais.",
+      "email": "Meu E-mail",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 PortifoLe. Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "by": "por Leandro Oliveira"
+  },
+  "cookieConsent": {
+    "message": "Este site utiliza cookies para melhorar sua experiência de navegação. Ao clicar em \"Aceitar\", você concorda com o uso de cookies de acordo com nossa",
+    "privacyPolicy": "Política de Privacidade",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidade",
+    "backHome": "← Voltar para a página inicial"
+  },
+  "switchLanguage": "English"
+} 

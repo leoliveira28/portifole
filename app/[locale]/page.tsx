@@ -8,8 +8,8 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { SpaceBackground } from "@/components/SpaceBackground";
 import { CookieConsent } from "@/components/CookieConsent";
+import { getDictionary } from "../i18n/utils";
 import type { Locale } from "@/middleware";
-import { getDictionary } from "./i18n/utils";
 
 export default async function Home({ 
   params: { locale } 

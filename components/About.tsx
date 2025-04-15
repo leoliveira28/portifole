@@ -11,7 +11,17 @@ const technologies = [
   { name: "HTML/CSS", icon: "🎨" },
 ];
 
-export function About() {
+interface AboutProps {
+  dict: {
+    title: string;
+    description: string;
+    paragraph1: string;
+    paragraph2: string;
+    technologies: string;
+  };
+}
+
+export function About({ dict }: AboutProps) {
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       {/* Background Elements */}
@@ -33,7 +43,7 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl transform rotate-3" />
               <div className="relative w-[385px] h-[385px] -rotate-1 rounded-2xl overflow-hidden">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.JPG"
                   alt="Desenvolvedor Full Stack"
                   fill
                   className="object-cover"
@@ -54,34 +64,27 @@ export function About() {
             <div>
               <h2 className="text-3xl font-bold mb-4">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                  Sobre Mim
+                  {dict.title}
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Desenvolvedor Full Stack com mais de 3 anos de experiência em desenvolvimento web,
-                especializado em criar soluções intuitivas e eficientes com React.js e Next.js.
+                {dict.description}
               </p>
             </div>
 
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                Minha jornada na programação começou com uma paixão por criar experiências digitais
-                memoráveis. Ao longo dos anos, desenvolvi expertise em diversas tecnologias modernas,
-                sempre focando em entregar soluções que não apenas atendam às necessidades dos clientes,
-                mas também superem suas expectativas.
+                {dict.paragraph1}
               </p>
 
               <p className="text-muted-foreground">
-                Acredito que o desenvolvimento web vai além de apenas escrever código - é sobre criar
-                experiências que impactam positivamente o negócio dos clientes. Meu objetivo é ajudar
-                empresas a alcançarem seus objetivos através de soluções tecnológicas inovadoras e
-                eficientes.
+                {dict.paragraph2}
               </p>
             </div>
 
             {/* Technologies Grid */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Tecnologias Principais</h3>
+              <h3 className="text-xl font-semibold mb-4">{dict.technologies}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {technologies.map((tech) => (
                   <motion.div

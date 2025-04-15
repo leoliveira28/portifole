@@ -1,0 +1,105 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Leandro Oliveira",
+    "title": "Full Stack Developer",
+    "description": "Specialized in creating modern and responsive web applications using Next.js and React.",
+    "cta": "My Projects",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Full Stack Developer with over 3 years of experience in web development, specialized in creating intuitive and efficient solutions with React.js and Next.js.",
+    "paragraph1": "My journey in programming began with a passion for creating memorable digital experiences. Over the years, I've developed expertise in various modern technologies, always focusing on delivering solutions that not only meet client needs but exceed their expectations.",
+    "paragraph2": "I believe that web development goes beyond just writing code - it's about creating experiences that positively impact clients' businesses. My goal is to help companies achieve their objectives through innovative and efficient technological solutions.",
+    "technologies": "Core Technologies"
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "Set of technologies and tools I use to create modern and efficient web solutions.",
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "others": "Others"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A selection of my main projects, demonstrating expertise in modern web development.",
+    "demoLink": "Live Demo",
+    "githubLink": "GitHub",
+    "project1": {
+      "title": "Hospital de Base de Rio Preto",
+      "description": "I developed a comprehensive web portal for Hospital de Base de Rio Preto, one of Brazil's largest healthcare institutions, which receives over 100,000 monthly visits. The portal provides extensive information for both patients and healthcare professionals and includes an integrated institutional blog. Built with Next.js and optimized for 100% SEO to maximize reach and visibility."
+    },
+    "project2": {
+      "title": "Hospital da Criança e Maternidade (HCM)",
+      "description": "I developed a web presence for HCM (Hospital da Criança e Maternidade), a pediatric hospital dedicated to providing humane care. The website was designed with a focus on sensitivity and user-friendliness to address the delicate nature of a children's healthcare institution."
+    },
+    "project3": {
+      "title": "SmartSol Task Management System",
+      "description": "I developed a comprehensive task management system with a Kanban-style interface. This project was built entirely using Next.js for the frontend and backend, leveraging PostgreSQL for the database and deployed on Vercel for scalability and reliability."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "description": "I offer custom solutions to transform your ideas into reality.",
+    "service1": {
+      "title": "Front-end Development",
+      "description": "Creation of modern, responsive, and high-performance interfaces with React, Next.js, and other cutting-edge technologies."
+    },
+    "service2": {
+      "title": "Back-end Development",
+      "description": "Building robust, scalable, and secure APIs using Node.js, Express, and SQL/NoSQL databases."
+    },
+    "service3": {
+      "title": "Full Stack Applications",
+      "description": "Complete development of web applications, from front-end to back-end, with integration of APIs and external services."
+    },
+    "service4": {
+      "title": "Technical Consulting",
+      "description": "Specialized consulting in software architecture, performance, and development best practices."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Let's discuss how I can help turn your idea into reality.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sending": "Sending...",
+      "send": "Send via WhatsApp"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "I'm available to discuss new projects and opportunities. Get in touch through the form or social media.",
+      "email": "My Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 PortifoLe. All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by Leandro Oliveira"
+  },
+  "cookieConsent": {
+    "message": "This website uses cookies to enhance your browsing experience. By clicking \"Accept\", you agree to the use of cookies in accordance with our",
+    "privacyPolicy": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "backHome": "← Back to Home"
+  },
+  "switchLanguage": "Português"
+} 

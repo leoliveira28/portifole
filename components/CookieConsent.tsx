@@ -1,9 +1,23 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-export function CookieConsent() {
+interface CookieConsentProps {
+  dict: {
+    message: string;
+    privacyPolicy: string;
+    accept: string;
+    decline: string;
+  };
+}
+
+export function CookieConsent({ dict }: CookieConsentProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
+  
+  // Extrai o locale do pathname atual
+  const locale = pathname.split('/')[1];
 
   useEffect(() => {
     // Verificar se o usuário já aceitou os cookies
@@ -33,10 +47,9 @@ export function CookieConsent() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex-1">
             <p className="text-sm text-muted-foreground">
-              Este site utiliza cookies para melhorar sua experiência de navegação. 
-              Ao clicar em "Aceitar", você concorda com o uso de cookies de acordo com nossa{' '}
-              <Link href="/privacy-policy" className="text-primary hover:underline">
-                Política de Privacidade
+              {dict.message}{' '}
+              <Link href={`/${locale}/privacy-policy`} className="text-primary hover:underline">
+                {dict.privacyPolicy}
               </Link>.
             </p>
           </div>
@@ -45,13 +58,13 @@ export function CookieConsent() {
               onClick={declineCookies}
               className="px-4 py-2 text-sm rounded-lg border border-border hover:bg-secondary transition-colors"
             >
-              Recusar
+              {dict.decline}
             </button>
             <button
               onClick={acceptCookies}
               className="px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
-              Aceitar
+              {dict.accept}
             </button>
           </div>
         </div>

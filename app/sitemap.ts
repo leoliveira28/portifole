@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { locales } from '@/middleware';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://lepimentel.dev.br';
@@ -6,22 +7,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Data de última modificação
   const lastModified = new Date();
 
-  // Páginas principais do site
-  const routes = [
-    {
-      url: baseUrl,
+  // Criar rotas para cada idioma
+  const routes: MetadataRoute.Sitemap = [];
+  
+  // Adiciona cada rota para cada idioma
+  locales.forEach(locale => {
+    // Página inicial
+    routes.push({
+      url: `${baseUrl}/${locale}`,
       lastModified,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
+    });
+    
+    // Política de privacidade
+    routes.push({
+      url: `${baseUrl}/${locale}/privacy-policy`,
       lastModified,
-      changeFrequency: 'yearly' as const,
+      changeFrequency: 'yearly',
       priority: 0.5,
-    },
-    // Se adicionar mais páginas no futuro, adicionar aqui
-  ];
+    });
+    
+    // Adicione mais páginas aqui quando necessário
+  });
 
   return routes;
 } 
