@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export function SpaceBackground() {
-  // Removida a referência não utilizada
   
   // Usar scroll global em vez do target específico
   const { scrollYProgress } = useScroll({
@@ -23,22 +22,22 @@ export function SpaceBackground() {
         className="absolute inset-0 bg-gradient-radial from-primary/40 via-transparent to-transparent"
       />
 
-      {/* Stars Layer 1 - Far */}
+      {/* Stars Layer 1 - Far - Menor movimento, maior tamanho do background */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat opacity-60"
+        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat bg-[length:250px_290px]"
       />
       
-      {/* Stars Layer 2 - Medium */}
+      {/* Stars Layer 2 - Medium - Movimento médio, tamanho médio do background */}
       <motion.div
-        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -50]), opacity }}
-        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat opacity-40"
+        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -60]), opacity }}
+        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat bg-[length:150px_150px] opacity-70"
       />
       
-      {/* Stars Layer 3 - Close */}
+      {/* Stars Layer 3 - Close - Movimento rápido, menor tamanho do background */}
       <motion.div
-        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -25]), opacity }}
-        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat opacity-20"
+        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -30]), opacity }}
+        className="absolute inset-0 bg-[url('/stars.svg')] bg-repeat bg-[length:100px_100px] opacity-85"
       />
 
       {/* Animated Orbs */}
@@ -68,7 +67,7 @@ export function SpaceBackground() {
       />
 
       {/* Gradient Overlay - reduced opacity to make background more visible */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
     </div>
   );
 } 

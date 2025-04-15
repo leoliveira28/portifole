@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "#home" },
@@ -14,6 +14,7 @@ const navigation = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +46,8 @@ export function Navigation() {
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      // Fechar o menu mobile após clicar
+      setMobileMenuOpen(false);
     }
   };
 
@@ -59,7 +62,7 @@ export function Navigation() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            <span className="gradient-text">DevPortfolio</span>
+            <span className="gradient-text">PortifoLe</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -68,7 +71,7 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-lg font-medium transition-colors ${
                   activeSection === item.href.replace('#', '')
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"
@@ -86,22 +89,71 @@ export function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors">
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              {mobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
             </svg>
           </button>
         </div>
+
+        {/* Mobile menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden mt-4 bg-secondary/80 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden"
+            >
+              <div className="flex flex-col py-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => scrollToSection(e, item.href)}
+                    className={`px-4 py-3 text-lg font-medium transition-colors ${
+                      activeSection === item.href.replace('#', '')
+                        ? "text-primary bg-secondary-dark"
+                        : "text-muted-foreground hover:text-primary hover:bg-secondary-light"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/blog"
+                  className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-primary hover:bg-secondary-light transition-colors"
+                >
+                  Blog
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.header>
   );

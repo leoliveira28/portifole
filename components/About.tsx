@@ -31,7 +31,7 @@ export function About() {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl transform rotate-3" />
-              <div className="relative rounded-2xl overflow-hidden">
+              <div className="relative w-[385px] h-[385px] -rotate-1 rounded-2xl overflow-hidden">
                 <Image
                   src="/profile.jpg"
                   alt="Desenvolvedor Full Stack"

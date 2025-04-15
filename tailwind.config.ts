@@ -58,6 +58,7 @@ const config: Config = {
         "float": "float 6s ease-in-out infinite",
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "twinkle": "twinkle 8s ease-in-out infinite",
+        "slide-up": "slide-up 0.3s ease-out",
       },
       keyframes: {
         float: {
@@ -67,6 +68,10 @@ const config: Config = {
         twinkle: {
           "0%, 100%": { opacity: "0.2" },
           "50%": { opacity: "0.4" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
     },

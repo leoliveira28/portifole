@@ -2,15 +2,17 @@
 <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="stars" width="50" height="50" patternUnits="userSpaceOnUse">
-      <circle cx="25" cy="25" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="0" cy="0" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="50" cy="50" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="25" cy="0" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="0" cy="25" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="50" cy="25" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="25" cy="50" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="0" cy="50" r="1" fill="currentColor" opacity="0.3"/>
-      <circle cx="50" cy="0" r="1" fill="currentColor" opacity="0.3"/>
+      <circle cx="25" cy="25" r="1" fill="#8b5cf6" opacity="0.5"/>
+      <circle cx="0" cy="0" r="0.8" fill="#8b5cf6" opacity="0.4"/>
+      <circle cx="50" cy="50" r="0.5" fill="#8b5cf6" opacity="0.5"/>
+      <circle cx="25" cy="0" r="0.7" fill="#8b5cf6" opacity="0.6"/>
+      <circle cx="0" cy="25" r="0.3" fill="#8b5cf6" opacity="0.4"/>
+      <circle cx="50" cy="25" r="0.5" fill="#8b5cf6" opacity="0.5"/>
+      <circle cx="25" cy="50" r="0.1" fill="#8b5cf6" opacity="0.4"/>
+      <circle cx="0" cy="50" r="0.6" fill="#8b5cf6" opacity="0.6"/>
+      <circle cx="50" cy="0" r="0.2" fill="#8b5cf6" opacity="0.4"/>
+      <circle cx="12" cy="37" r="0.4" fill="#8b5cf6" opacity="1.0"/>
+      <circle cx="37" cy="12" r="0.7" fill="#8b5cf6" opacity="0.5"/>
     </pattern>
   </defs>
   <rect width="100" height="100" fill="url(#stars)"/>

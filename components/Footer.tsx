@@ -31,7 +31,7 @@ export function Footer() {
           >
             <Link href="/" className="text-xl font-bold">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                DevPortfolio
+              PortifoLe
               </span>
             </Link>
             <p className="text-sm text-muted-foreground mt-1">
@@ -67,7 +67,7 @@ export function Footer() {
             className="text-center md:text-right"
           >
             <p className="text-sm text-muted-foreground">
-              © {currentYear} DevPortfolio. Todos os direitos reservados.
+              © {currentYear} PortifoLe. Todos os direitos reservados.
             </p>
           </motion.div>
         </div>

@@ -5,8 +5,20 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Desenvolvedor de Software",
-  description: "Portfolio profissional de um desenvolvedor de software especializado em desenvolvimento web",
+  title: "PortifoLe | Desenvolvedor Full Stack",
+  description: "Portfolio profissional de Leandro Oliveira, desenvolvedor Full Stack especializado em Next.js, React e aplicações web modernas",
+  authors: [{ name: "Leandro Oliveira", url: "https://github.com/leoliveira28" }],
+  creator: "Leandro Oliveira",
+  keywords: ["desenvolvedor", "full stack", "next.js", "react", "portfolio", "web development"],
+  metadataBase: new URL('https://portifolio.dev'),
+  openGraph: {
+    title: "PortifoLe | Desenvolvedor Full Stack",
+    description: "Portfolio profissional de Leandro Oliveira, desenvolvedor Full Stack especializado em Next.js, React e aplicações web modernas",
+    url: 'https://portifolio.dev',
+    siteName: 'PortifoLe',
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

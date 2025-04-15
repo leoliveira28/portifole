@@ -1,6 +1,5 @@
 'use client'
 import { motion } from "framer-motion";
-import { SpaceBackground } from "./SpaceBackground";
 
 export function Hero() {
   return (

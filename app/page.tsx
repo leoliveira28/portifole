@@ -7,6 +7,7 @@ import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { SpaceBackground } from "@/components/SpaceBackground";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Contact />
       </section>
       <Footer />
+      <CookieConsent />
     </main>
   );
 }
