@@ -12,7 +12,14 @@ export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen bg-background">
       <SpaceBackground />
-      <Navigation />
+      <Navigation locale={"pt-BR"} dict={{
+        home: "",
+        about: "",
+        projects: "",
+        services: "",
+        contact: "",
+        blog: ""
+      }} switchLanguage={""} />
       
       <section className="pt-32 pb-20 px-4 relative">
         <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm p-8 rounded-xl border border-border">
@@ -122,7 +129,11 @@ export default function PrivacyPolicy() {
         </div>
       </section>
       
-      <Footer />
+      <Footer dict={{
+        copyright: "",
+        madeWith: "",
+        by: ""
+      }} />
     </main>
   );
 } 

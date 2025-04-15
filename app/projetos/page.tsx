@@ -28,7 +28,14 @@ const projects = [
 export default function Projetos() {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation locale={"pt-BR"} dict={{
+        home: "",
+        about: "",
+        projects: "",
+        services: "",
+        contact: "",
+        blog: ""
+      }} switchLanguage={""} />
       
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
