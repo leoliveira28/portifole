@@ -1,16 +1,13 @@
 import { Navigation } from "@/components/Navigation";
+import { getDictionary } from "../i18n/utils";
 
 export default function Sobre() {
+  // Usando o dicionário pt-BR para a página sobre
+  const dict = getDictionary("pt-BR");
+
   return (
     <main className="min-h-screen bg-background">
-      <Navigation locale={"pt-BR"} dict={{
-        home: "",
-        about: "",
-        projects: "",
-        services: "",
-        contact: "",
-        blog: ""
-      }} switchLanguage={""} />
+      <Navigation locale={"pt-BR"} dict={dict.navigation} switchLanguage={dict.switchLanguage} />
       
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
