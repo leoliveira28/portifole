@@ -19,6 +19,22 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     type: 'website',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'adicione_seu_codigo_de_verificacao', // Substitua pelo seu código de verificação do Google
+  },
+  alternates: {
+    canonical: 'https://portifolio.dev',
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${montserrat.className} bg-background text-foreground`}>
         {children}
       </body>
