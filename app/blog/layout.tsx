@@ -9,7 +9,15 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <Navigation />
+      <Navigation locale={"pt-BR"} dict={{
+        home: "",
+        about: "",
+        projects: "",
+        services: "",
+        contact: "",
+        blog: ""
+      }} 
+      switchLanguage={""} />
       <BlogNavigation />
       {children}
     </>
