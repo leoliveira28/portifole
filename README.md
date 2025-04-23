@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👋 Olá, eu sou Leandro Oliveira!
 
-## Getting Started
+## 🚀 Desenvolvedor Full Stack | Especialista em Next.js & React
 
-First, run the development server:
+<div align="center">
+  <img src="https://raw.githubusercontent.com/leoliveira28/portifole/main/public/profile.JPG" alt="Leandro Oliveira" width="200" style="border-radius: 50%;"/>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 💡 Sobre Mim
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sou um desenvolvedor Full Stack apaixonado por criar soluções inovadoras e experiências digitais memoráveis. Com mais de 5 anos de experiência em desenvolvimento web, tenho trabalhado em diversos projetos desafiadores que me permitiram expandir minhas habilidades e conhecimentos.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠️ Tecnologias & Habilidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Frontend
+- React.js | Next.js | TypeScript
+- Tailwind CSS | Styled Components
+- SEO | Performance | Acessibilidade
 
-## Learn More
+#### Backend
+- Node.js | Python
+- PostgreSQL | MongoDB
+- APIs REST | GraphQL
 
-To learn more about Next.js, take a look at the following resources:
+#### DevOps & Ferramentas
+- Git | Docker | AWS
+- CI/CD | Vercel
+- Metodologias Ágeis
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏆 Projetos Destacados
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 1. Hospital de Base de Rio Preto
+- Portal web completo para uma das maiores instituições de saúde do Brasil
+- Mais de 100.000 visitas mensais
+- Otimizado para SEO e performance
+- [Visite o site](https://www.hospitaldebase.com.br)
 
-## Deploy on Vercel
+#### 2. Hospital da Criança e Maternidade (HCM)
+- Website com foco em UX/UI e acessibilidade
+- Design sensível e intuitivo
+- [Visite o site](https://www.hcmriopreto.com.br)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 3. Sistema de Gestão de Tarefas SmartSol
+- Sistema Kanban completo
+- Next.js + PostgreSQL
+- [Visite o site](https://smartsol.v3vagenciacriativa.com.br)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🌟 Valores
+
+- Qualidade e excelência em cada linha de código
+- Inovação e criatividade na resolução de problemas
+- Colaboração e comunicação efetiva
+- Aprendizado contínuo e evolução profissional
+
+### 📫 Entre em Contato
+
+- [LinkedIn](https://www.linkedin.com/in/leandro-oliveira-28/)
+- [Portfolio](http://lepimentel.dev.br)
+- Email: [seu-email@exemplo.com]
+
+### 📊 Estatísticas do GitHub
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=leoliveira28&show_icons=true&theme=radical" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=leoliveira28&layout=compact&theme=radical" alt="Top Languages"/>
+</div>
+
+---
+
+<div align="center">
+  <p>Feito com ❤️ por Leandro Oliveira</p>
+  <p>© 2025 PortifoLe. Todos os direitos reservados.</p>
+</div>
