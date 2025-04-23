@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Leandro Oliveira", url: "https://github.com/leoliveira28" }],
   creator: "Leandro Oliveira",
   keywords: ["desenvolvedor", "full stack", "next.js", "react", "portfolio", "web development"],
-  metadataBase: new URL('https://portifolio.dev'),
+  metadataBase: new URL('http://lepimentel.dev.br'),
   openGraph: {
     title: "PortifoLe | Desenvolvedor Full Stack",
     description: "Portfolio profissional de Leandro Oliveira, desenvolvedor Full Stack especializado em Next.js, React e aplicações web modernas",
-    url: 'https://portifolio.dev',
+    url: 'http://lepimentel.dev.br',
     siteName: 'PortifoLe',
     locale: 'pt_BR',
     type: 'website',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     google: 'adicione_seu_codigo_de_verificacao', // Substitua pelo seu código de verificação do Google
   },
   alternates: {
-    canonical: 'https://portifolio.dev',
+    canonical: 'http://lepimentel.dev.br',
   },
 };
 
